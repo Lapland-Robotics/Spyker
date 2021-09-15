@@ -47,6 +47,43 @@ Source bash...
 ```
 $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
+
+### NOTE! SOME REASON ros FULL IS NOT FULL INSTALLATION. OR I'M JUST NOOB.
+YOU HAVE TO INSTALL SEVERAL PACKAGES AT TIME WHEN YOU NEED THEM (map_server, rosserial etc...).
+Example
+If some:
+```
+ERROR: cannot launch node of type [map_server/map_server]: map_server
+```
+than:
+```
+sudo apt-get install ros-melodic-map-server
+```
+NOTE! MISSING "map_server", BUT INSTALLATION PACKAGE IS "map-server"
+
+If some:
+```
+***Failed to create the global_planner/GlobalPlanner********
+```
+than:
+```
+sudo apt-get install ros-melodic-global-planner
+```
+
+If some:
+```
+ImportError: No module named ackermann_msgs.msg
+```
+than:
+```
+sudo apt-get install ros-melodic-ackermann-msgs
+```
+
+### ROS serial for UART (serial-port) communication (here with ESP32)
+```
+sudo apt-get install ros-melodic-rosserial
+```
+
 ### RPLIDAR laser Lidar
 [http://wiki.ros.org/rplidar](http://wiki.ros.org/rplidar)
 Source: [https://github.com/Slamtec/rplidar_ros](https://github.com/Slamtec/rplidar_ros)
@@ -71,7 +108,7 @@ Note! Remember install ZED SDK (this is mentioned also in next guide...)
 ### dialout group
 Add your username to dialout group so you don't need chmod every ttyUSBx port...
 ```
-$ sudo adduser <your user name> dialout
+$ sudo adduser <your username> dialout
 ```
 
 ### Rename ESP32 USB-port:
