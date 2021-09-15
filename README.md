@@ -1,6 +1,10 @@
 # Spyker
 ROS Spyker, autonomous tracked vehicle. Originally developed (first versions): https://github.com/SamKnoors/Spyker-Lapland-Robotics
 
+
+https://user-images.githubusercontent.com/90048225/133428664-906266a3-e5e2-4a9b-a2f8-666d879899b2.mp4
+
+
 ## At the moment
 - nVidia Jetson Nano (JetPack 4.5) with RPLidar
 - ROS Melodic and Hector_SLAM gmapping on remote launch...
@@ -104,6 +108,7 @@ Note! Remember install ZED SDK (this is mentioned also in next guide...)
 [https://www.stereolabs.com/docs/ros/](https://www.stereolabs.com/docs/ros/)
 
 
+
 ## devrules
 ### dialout group
 Add your username to dialout group so you don't need chmod every ttyUSBx port...
@@ -132,6 +137,4 @@ $ cd ~/catkin_ws
 $ catkin_make
 ```
 
-
-https://user-images.githubusercontent.com/90048225/133428664-906266a3-e5e2-4a9b-a2f8-666d879899b2.mp4
 
