@@ -41,7 +41,8 @@ Source bash...
 ```
 $ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 ```
-To install dependencies for building ROS packages, run:
+
+### Install dependencies for building ROS packages, run:
 ```
 $ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 ```
@@ -51,6 +52,7 @@ $ sudo apt install python-rosdep
 $ sudo rosdep init
 $ rosdep update
 ```
+
 ### Make ROS workspace
 ```
 $ mkdir -p ~/catkin_ws/src
@@ -108,7 +110,7 @@ $ udevadm info --name=/dev/ttyUSBx --attribute-walk # USBx = where ESP32 is conn
 Move 99-rplidar-usb.rules to path /etc/udev/rules.d/
 
 
-## spyker ros package:
+## Create spyker ros package:
 
 ```
 $ cd catkin_ws/src
