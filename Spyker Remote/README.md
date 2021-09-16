@@ -12,7 +12,7 @@
   $ ssh <username>@<x.x.x.x> # x.x.x.x = ip address in Spyker
   ```
   4. In "ip_addresses_Spyker.sh", check IP -addresses, username and password.
-  5. Add "Spyker Remote" launch icon to "Favorites" ("All Softwares" and right click then "Add Favorites"....)
+  5. Add "Spyker Remote" launch icon to "Favorites" ("Softwares" and right click then "Add Favorites"....)
 
 ### ROS Installation (Copy from ros.org)
 [http://wiki.ros.org/melodic/Installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu)
@@ -45,7 +45,7 @@ Source bash...
 ```
 $ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 ```
-  
+
  ## Use
 
   1. Click the icon ;)
