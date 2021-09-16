@@ -41,6 +41,16 @@ Source bash...
 ```
 $ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 ```
+To install dependencies for building ROS packages, run:
+```
+$ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+```
+Initialize rosdep:
+```
+$ sudo apt install python-rosdep
+$ sudo rosdep init
+$ rosdep update
+```
 ### Make ROS workspace
 ```
 $ mkdir -p ~/catkin_ws/src
@@ -52,36 +62,6 @@ Source bash...
 $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-### NOTE! SOME REASON ros FULL IS NOT FULL INSTALLATION. OR I'M JUST NOOB.
-YOU HAVE TO INSTALL SEVERAL PACKAGES AT TIME WHEN YOU NEED THEM (map_server, rosserial etc...).
-Example
-If some:
-```
-ERROR: cannot launch node of type [map_server/map_server]: map_server
-```
-than:
-```
-sudo apt-get install ros-melodic-map-server
-```
-NOTE! MISSING "map_server", BUT INSTALLATION PACKAGE IS "map-server"
-
-If some:
-```
-***Failed to create the global_planner/GlobalPlanner********
-```
-than:
-```
-sudo apt-get install ros-melodic-global-planner
-```
-
-If some:
-```
-ImportError: No module named ackermann_msgs.msg
-```
-than:
-```
-sudo apt-get install ros-melodic-ackermann-msgs
-```
 
 ### ROS serial for UART (serial-port) communication (here with ESP32)
 ```
@@ -129,12 +109,45 @@ Move 99-rplidar-usb.rules to path /etc/udev/rules.d/
 
 
 ## spyker ros package:
-Move rest of spyker (folder) to yours ROS workspace source folder (assuming here ws is ~/catkin_ws/src).
+
 ```
 $ cd catkin_ws/src
 $ catkin_create_pkg spyker
+```
+Move spyker folder contents to yours spyker folder in ROS workspace source folder (assuming here ws is ~/catkin_ws/spyker).
+```
 $ cd ~/catkin_ws
 $ catkin_make
 ```
 
+## Troubleshooter:
+### NOTE! SOME REASON ros FULL IS NOT FULL INSTALLATION. OR I'M JUST NOOB.
+YOU HAVE TO INSTALL SEVERAL PACKAGES AT TIME WHEN YOU NEED THEM (map_server, rosserial etc...).
+Example
+If some:
+```
+ERROR: cannot launch node of type [map_server/map_server]: map_server
+```
+than:
+```
+sudo apt-get install ros-melodic-map-server
+```
+NOTE! MISSING "map_server", BUT INSTALLATION PACKAGE IS "map-server"
 
+If some:
+```
+***Failed to create the global_planner/GlobalPlanner********
+```
+than:
+```
+sudo apt-get install ros-melodic-global-planner
+```
+
+If some:
+```
+ImportError: No module named ackermann_msgs.msg
+```
+than:
+```
+sudo apt-get install ros-melodic-ackermann-msgs
+```
