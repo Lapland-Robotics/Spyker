@@ -48,7 +48,6 @@ $ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator p
 ```
 Initialize rosdep:
 ```
-$ sudo apt install python-rosdep
 $ sudo rosdep init
 $ rosdep update
 ```
