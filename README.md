@@ -109,6 +109,7 @@ $ udevadm info --name=/dev/ttyUSBx --attribute-walk # USBx = where ESP32 is conn
 ### Rename RPLidar USB-port:
 Move 99-rplidar-usb.rules to path /etc/udev/rules.d/
 
+### REBOOT SYSTEM (Just in case...)
 
 ## Create spyker ros package:
 
