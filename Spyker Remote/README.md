@@ -6,7 +6,7 @@ Move spyker.desktop to paht: /usr/share/applications.
 
 ## Installation
 
-  1. Copy all files to Home -folder except "Spyker.desktop" to /usr/share/application.
+  1. Copy all files to Home -folder except "Spyker.desktop".
   2. Install sshpass
   ```
   $ sudo apt-get install sshpass
