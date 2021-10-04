@@ -3,7 +3,7 @@ ROS Spyker, autonomous tracked vehicle. Originally developed (first versions): h
 
 **spyker: Codes for Spyker**
 
-**Spyker_remote: Codes for control and launch Spyker remotely**
+**Spyker Remote: Codes for control and launch Spyker remotely**
 
 **Spyker Interface: Hardware description**
 
