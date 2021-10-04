@@ -1,8 +1,8 @@
 # How to remotely control Spyker....
 
 ## Launch icon. desktop_apps(Linux "desktop" -launch)
-Remember edit paths (change username) in *.desktop files.
-Move *.desktops to paht: /usr/share/applications.
+Remember edit paths (change username) in spyker.desktop files.
+Move spyker.desktop to paht: /usr/share/applications.
 
 ## Installation
 
