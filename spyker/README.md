@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/90048225/133428664-906266a3-e5e2-4a9b-
 
 
 ## At the moment
-- nVidia Jetson Nano (JetPack 4.5) with RPLidar
+- Nvidia Jetson Nano (JetPack 4.5) with RPLidar
 - ROS Melodic and Hector_SLAM gmapping on remote launch...
 
 ## Installation
