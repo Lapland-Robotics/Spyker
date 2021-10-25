@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/90048225/133428664-906266a3-e5e2-4a9b-
 ### ROS Installation (Copy from ros.org)
 [http://wiki.ros.org/melodic/Installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu)
 
-Configure your Ubuntu repositories
+Configure your Ubuntu repositories repositories to allow "restricted," "universe," and "multiverse.":
 [https://help.ubuntu.com/community/Repositories/Ubuntu](https://help.ubuntu.com/community/Repositories/Ubuntu)
 
 Setup your computer to accept software from packages.ros.org.
