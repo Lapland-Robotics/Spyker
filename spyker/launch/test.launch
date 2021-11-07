@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <launch>
 
+    <param name="/use_sim_time" value="false"/>
+
  <!-- arguments -->
     <arg name="saved_map" default="false"/>
     <arg name="odom_topic" default="zed2/zed_node/odom"/>
@@ -23,9 +25,13 @@
     <param name="angle_compensate"    type="bool"   value="true"/>
     <param name="scan_mode"           type="string" value="Sensitivity"/>
     </node>
-   <!-- <include file="$(find sick_scan)/launch/sick_lms_5xx.launch"/>-->
-    <include file="$(find hector_mapping)/launch/mapping_default.launch"/>
-
+   
+    
+   <node pkg = "tf" type="static_transform_publisher" name ="scanmather_to_base_link" args="0 0 0 0 0 0 1 odom base_link 100"/>  
+   <node pkg = "tf" type="static_transform_publisher" name ="base_link_to_laser" args="0 0 0 0 0 0 1 base_link laser 100"/>  
+    <!-- <include file="$(find sick_scan)/launch/sick_lms_5xx.launch"/>-->
+    <!--<include file="$(find hector_mapping)/launch/mapping_default.launch"/>-->
+   <include file="$(find spyker)/launch/hector_mapping.launch"/>
     
 <!--ZED2 nodes -->
    <!--  <include file="$(find zed_wrapper)/launch/zed2.launch"/>
@@ -34,7 +40,8 @@
 <!-- only needed if using premade map -->
     <group if="$(arg saved_map)">
         <!--- Run AMCL --> 
-        <include file="$(find amcl)/examples/amcl_omni.launch" />
+        <!--<include file="$(find amcl)/examples/amcl_omni.launch" />-->
+	<include file="$(find spyker)/launch/amcl_omni.launch" />
         <param name="odom_frame_id" value="zed2/zed_node/odom"/>
     </group>
     
@@ -50,13 +57,12 @@
     <rosparam file="$(find spyker)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find spyker)/params/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find spyker)/params/global_costmap_params.yaml" command="load" /> 
-    <!-- <rosparam file="$(find spyker)/params/base_local_planner_params.yaml" command="load" /> -->
+    <rosparam file="$(find spyker)/params/base_local_planner_params.yaml" command="load" />
     <rosparam file="$(find spyker)/params/move_base_params.yaml" command="load" />
     <rosparam file="$(find spyker)/params/dwa_local_planner_params.yaml" command="load" />
   
     <!-- <remap from="odom" to="$(arg odom_topic)" /> -->
  </node>
-
 
 </launch> 
  

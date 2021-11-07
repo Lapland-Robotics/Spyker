@@ -3,17 +3,17 @@
 
    <master auto="start"/>
  <!-- Run the map server -->
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find spyker_navigation)/map.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find spyker)/map.yaml"/>
 	<param name="frame_id" value="/map"/>
  <!--- Run AMCL --> 
-    <include file="$(find amcl)/examples/amcl_omni.launch" />
+    <include file="$(find spyker)/launch/amcl_omni.launch" />
 
    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find spyker_navigation)/params/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
-    <rosparam file="$(find spyker_navigation)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find spyker_navigation)/params/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find spyker_navigation)/params/global_costmap_params.yaml" command="load" /> 
-    <rosparam file="$(find spyker_navigation)/params/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find spyker)/params/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find spyker)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find spyker)/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find spyker)/params/global_costmap_params.yaml" command="load" /> 
+    <rosparam file="$(find spyker)/params/base_local_planner_params.yaml" command="load" />
  </node>
 
 </launch> 
