@@ -5,7 +5,5 @@ readonly robot_IP=172.16.200.201
 #readonly this_remote_PC_IP=192.168.0.12
 readonly this_remote_PC_IP=172.16.200.199
 
-#readonly my_username=pxl-stage
 readonly my_username=spyker
-#readonly hoppop=2580
-readonly hoppop=spyker
+readonly my_pass_word=spyker

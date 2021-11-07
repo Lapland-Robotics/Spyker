@@ -7,7 +7,5 @@ export ROS_IP=$this_remote_PC_IP
 echo "Loading ROS Parametets Editor..."
 sleep 5s
 source /opt/ros/melodic/setup.bash
-rosrun rqt_tf_tree rqt_tf_tree #rosrun rqt_reconfigure rqt_reconfigure
-
-
+rosrun rqt_reconfigure rqt_reconfigure #rqt_graph rqt_graph #rqt_tf_tree rqt_tf_tree
 
