@@ -16,7 +16,7 @@
 
   acc_lim_x: 0.5
   acc_lim_y: 0.0
-  acc_lim_theta: 0.5 
+  acc_lim_theta: 0.25 
 
 # Goal Tolerance Parametes
   xy_goal_tolerance: 0.05
