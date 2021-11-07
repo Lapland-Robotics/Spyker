@@ -6,15 +6,10 @@ ROS Spyker, autonomous tracked vehicle. Originally developed (first versions): h
 **Spyker Remote: Codes for control and launch Spyker remotely**
 
 ## TODO:
-
-**Spyker Interface: Hardware description**
-
-**Arduino/Spyker: Convert Ros_motordrive "platformIO" -project to Arduino IDE sketch for programming Spyker_interface ESP32**
-
-## TODO (this have been done, but someone format SD-card and .... :) )
-- make additional(needed) launch -files to work space folder (you don't have to edit them in opt/share/ros/melodic.....)
+- Spyker Interface: Hardware description
+- Arduino/Spyker: Convert Ros_motordrive "platformIO" -project to Arduino IDE sketch for programming Spyker_interface ESP32**
+(this have been done, but someone format SD-card and .... :) )
 - install ZED SDK (some ros launches need this)
-- change original ESP32 code to work ind Arduino IDE 
 
 ## At the moment
 - nVidia Jetson Nano (JetPack 4.5) with RPLidar
