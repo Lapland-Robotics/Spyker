@@ -9,7 +9,7 @@ ROS Spyker, autonomous tracked vehicle. Originally developed (first versions): h
 
 **Spyker Interface: Hardware description**
 
-**Arduino/Spyker: Arduino IDE sketch for programming Spyker_interface ESP32**
+**Arduino/Spyker: Convert Ros_motordrive "platformIO" -project to Arduino IDE sketch for programming Spyker_interface ESP32**
 
 ## TODO (this have been done, but someone format SD-card and .... :) )
 - make additional(needed) launch -files to work space folder (you don't have to edit them in opt/share/ros/melodic.....)
